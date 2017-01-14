@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
 /**
  * @author shimomo
  */
-class LaravelPing extends Facade
+class LaravelPingFacade extends Facade
 {
     /**
      * @return string
