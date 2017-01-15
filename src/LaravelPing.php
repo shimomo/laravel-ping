@@ -10,14 +10,24 @@ use JJG\Ping;
 class LaravelPing
 {
     /**
-     * @param  string $host
-     * @return boolean
+     * @param  string   $host
+     * @param  int|null $ttl
+     * @param  int|null $timeout
+     * @return bool
      */
-    public function execute($host)
+    public function execute(string $host, int $ttl = null, int $timeout = null)
     {
         $ping = new Ping($host);
-        $result = $ping->ping();
-        if ($result) {
+
+        if (!is_null($ttl)) {
+            $ping->setTtl($ttl);
+        }
+
+        if (!is_null($timeout)) {
+            $ping->setTimeout($timeout);
+        }
+
+        if ($ping->ping()) {
             return true;
         }
         return false;
