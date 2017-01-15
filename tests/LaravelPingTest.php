@@ -29,7 +29,7 @@ class LaravelPingTest extends PHPUnit_Framework_TestCase
     {
         $this->assertTrue($this->laravelPing->execute('example.com'));
     }
-    
+
     /**
      * @return void
      */
