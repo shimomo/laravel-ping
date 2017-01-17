@@ -16,6 +16,7 @@ class LaravelPing
     protected $instance;
 
     /**
+     * @return void
      * @throws Exception
      */
     public function __construct()
