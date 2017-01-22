@@ -1,13 +1,13 @@
 <?php
 
-namespace Shimomo\Ping;
+namespace Shimomo\Laravel;
 
 use Illuminate\Support\ServiceProvider;
 
 /**
  * @author shimomo
  */
-class LaravelPingServiceProvider extends ServiceProvider
+class PingServiceProvider extends ServiceProvider
 {
     /**
      * @var bool
@@ -20,7 +20,7 @@ class LaravelPingServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('ping', function ($app) {
-            return new LaravelPing();
+            return new Ping();
         });
     }
 

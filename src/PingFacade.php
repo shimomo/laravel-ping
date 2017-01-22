@@ -1,13 +1,13 @@
 <?php
 
-namespace Shimomo\Ping;
+namespace Shimomo\Laravel;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * @author shimomo
  */
-class LaravelPingFacade extends Facade
+class PingFacade extends Facade
 {
     /**
      * @return string

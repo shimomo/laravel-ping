@@ -3,7 +3,7 @@
 ## Install
 Add to ```composer.json```.
 ```
-"shimomo/laravel-ping": "^1.0.0"
+"shimomo/laravel-ping": "^2.0.0"
 ```
 
 Execute the command.
@@ -15,7 +15,7 @@ Add to ```config/app.conf```.
 ```
 'providers' => [
     // ...
-    Shimomo\Ping\LaravelPingServiceProvider::class,
+    Shimomo\Laravel\PingServiceProvider::class,
 ]
 ```
 
@@ -23,7 +23,7 @@ Add to ```config/app.conf```.
 ```
 'aliases' => [
     // ...
-    'Ping' => Shimomo\Ping\LaravelPingFacade::class,
+    'Ping' => Shimomo\Laravel\PingFacade::class,
 ]
 ```
 
@@ -49,6 +49,7 @@ class PingController extends Controller
         if (Ping::execute('example.com') {
             return 'OK';
         }
+
         return 'NG';
     }
 }
