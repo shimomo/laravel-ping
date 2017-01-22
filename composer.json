@@ -13,7 +13,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Shimomo\\Ping\\": "src/"
+      "Shimomo\\Laravel\\": "src/"
     }
   }
 }
