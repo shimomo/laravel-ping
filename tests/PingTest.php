@@ -2,12 +2,12 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use Shimomo\Ping\LaravelPing;
+use Shimomo\Laravel\Ping;
 
 /**
  * @author shimomo
  */
-class LaravelPingTest extends PHPUnit_Framework_TestCase
+class PingTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @var Shimomo\Ping\LaravelPing
@@ -19,7 +19,7 @@ class LaravelPingTest extends PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
-        $this->laravelPing = new LaravelPing();
+        $this->laravelPing = new Ping();
     }
 
     /**
