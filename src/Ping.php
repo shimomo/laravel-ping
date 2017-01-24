@@ -13,7 +13,7 @@ class Ping
     /**
      * @var JJG\Ping
      */
-    protected $instance;
+    protected $geerlingguyPing;
 
     /**
      * @return void
@@ -22,7 +22,7 @@ class Ping
     public function __construct()
     {
         try {
-            $this->instance = new GeerlingguyPing('example.com');
+            $this->geerlingguyPing = new GeerlingguyPing('example.com');
         } catch (Exception $e) {
             throw new Exception('Error Processing Request', 1);
         }
@@ -36,16 +36,16 @@ class Ping
      */
     public function execute(string $host, int $ttl = null, int $timeout = null)
     {
-        $this->instance->setHost($host);
+        $this->geerlingguyPing->setHost($host);
 
         if (!is_null($ttl)) {
-            $this->instance->setTtl($ttl);
+            $this->geerlingguyPing->setTtl($ttl);
         }
 
         if (!is_null($timeout)) {
-            $this->instance->setTimeout($timeout);
+            $this->geerlingguyPing->setTimeout($timeout);
         }
 
-        return $this->instance->ping();
+        return $this->geerlingguyPing->ping();
     }
 }
