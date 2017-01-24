@@ -10,16 +10,16 @@ use Shimomo\Laravel\Ping;
 class PingTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * @var Shimomo\Ping\LaravelPing
+     * @var Shimomo\Laravel\Ping
      */
-    protected $LaravelPing;
+    protected $ping;
 
     /**
      * @return void
      */
     public function setUp()
     {
-        $this->laravelPing = new Ping();
+        $this->ping = new Ping();
     }
 
     /**
@@ -27,7 +27,7 @@ class PingTest extends PHPUnit_Framework_TestCase
      */
     public function testSuccess()
     {
-        $this->assertTrue($this->laravelPing->execute('example.com'));
+        $this->assertInternalType('double', $this->ping->execute('example.com'));
     }
 
     /**
@@ -35,6 +35,6 @@ class PingTest extends PHPUnit_Framework_TestCase
      */
     public function testFailure()
     {
-        $this->assertFalse($this->laravelPing->execute('shimomo.example.com'));
+        $this->assertFalse($this->ping->execute('shimomo.example.com'));
     }
 }

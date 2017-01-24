@@ -32,7 +32,7 @@ class Ping
      * @param  string   $host
      * @param  int|null $ttl
      * @param  int|null $timeout
-     * @return bool
+     * @return double|bool
      */
     public function execute(string $host, int $ttl = null, int $timeout = null)
     {
@@ -46,10 +46,6 @@ class Ping
             $this->instance->setTimeout($timeout);
         }
 
-        if ($this->instance->ping()) {
-            return true;
-        }
-
-        return false;
+        return $this->instance->ping();
     }
 }
