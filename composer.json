@@ -1,19 +1,19 @@
 {
-  "name": "shimomo/laravel-ping",
-  "description": "Ping for Laravel",
-  "keywords": ["ping", "laravel"],
-  "license": "MIT",
-  "require": {
-    "php": ">=7.0.0",
-    "geerlingguy/ping": "^1.0.0",
-    "illuminate/support": "^5.0.0"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^5.0.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Shimomo\\Laravel\\": "src/"
+    "name": "shimomo/laravel-ping",
+    "description": "Ping for Laravel",
+    "keywords": ["ping", "laravel"],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0.0",
+        "geerlingguy/ping": "^1.0.0",
+        "illuminate/support": "^5.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shimomo\\Laravel\\": "src/"
+        }
     }
-  }
 }
