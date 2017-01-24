@@ -1,4 +1,5 @@
 # Laravel-Ping
+This is a package for using Ping in Laravel.
 
 ## Install
 Add to ```composer.json```.
@@ -28,7 +29,7 @@ Add to ```config/app.conf```.
 ```
 
 ## Usage
-```
+```php
 <?php
 
 namespace App\Http\Controllers;
