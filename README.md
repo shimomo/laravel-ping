@@ -2,30 +2,31 @@
 This is a package for using Ping in Laravel.
 
 ## Install
-Add to ```composer.json```.
+Install via composer.
 ```
-"shimomo/laravel-ping": "^2.0.0"
-```
-
-Execute the command.
-```
-$ composer update
+$ composer require shimomo/laravel-ping
 ```
 
-Add to ```config/app.conf```.
-```
-'providers' => [
+Add to ```config/app.php```.
+```php
+<?php
+
+return [
+
     // ...
-    Shimomo\Laravel\PingServiceProvider::class,
-]
-```
 
-Add to ```config/app.conf```.
-```
-'aliases' => [
+    'providers' => [
+        // ...
+        Shimomo\Laravel\PingServiceProvider::class,
+    ],
+
     // ...
-    'Ping' => Shimomo\Laravel\PingFacade::class,
-]
+
+    'aliases' => [
+        // ...
+        'Ping' => Shimomo\Laravel\PingFacade::class,
+    ],
+];
 ```
 
 ## Usage
