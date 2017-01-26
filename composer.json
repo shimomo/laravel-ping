@@ -1,6 +1,6 @@
 {
     "name": "shimomo/laravel-ping",
-    "description": "Ping for Laravel",
+    "description": "This is a package for using Ping in Laravel.",
     "keywords": ["ping", "laravel"],
     "license": "MIT",
     "require": {
