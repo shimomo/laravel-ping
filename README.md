@@ -2,7 +2,7 @@
 This is a package for using Ping in Laravel.
 
 ## Install
-Install via composer.
+Install via Composer.
 ```
 $ composer require shimomo/laravel-ping
 ```
@@ -48,7 +48,7 @@ class PingController extends Controller
      */
     public function execute()
     {
-        if (Ping::execute('example.com') {
+        if (Ping::execute('example.com')) {
             return 'OK';
         }
 
