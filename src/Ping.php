@@ -2,7 +2,6 @@
 
 namespace Shimomo\Laravel;
 
-use Exception;
 use JJG\Ping as GeerlingguyPing;
 
 /**
@@ -17,15 +16,10 @@ class Ping
 
     /**
      * @return void
-     * @throws Exception
      */
     public function __construct()
     {
-        try {
-            $this->geerlingguyPing = new GeerlingguyPing('example.com');
-        } catch (Exception $e) {
-            throw new Exception('Error Processing Request', 1);
-        }
+        $this->geerlingguyPing = new GeerlingguyPing('example.com');
     }
 
     /**
