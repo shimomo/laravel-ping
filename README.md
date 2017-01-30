@@ -1,4 +1,8 @@
 # Laravel-Ping
+
+[![Build Status](https://circleci.com/gh/shimomo/laravel-ping.svg?style=shield&circle-token=42b5e80c5bd62704305421ddc8c29900acfd952d)](https://circleci.com/gh/shimomo/laravel-ping)
+[![MIT License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE)
+
 This is a package for using Ping in Laravel.
 
 ## Install
