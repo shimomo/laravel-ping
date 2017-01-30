@@ -48,11 +48,11 @@ class PingController extends Controller
      */
     public function execute()
     {
-        if (Ping::execute('example.com')) {
-            return 'OK';
+        if ($latency = Ping::execute('example.com')) {
+            return $latency . 'ms';
         }
 
-        return 'NG';
+        return 'error';
     }
 }
 ```
