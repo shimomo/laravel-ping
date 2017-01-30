@@ -10,7 +10,7 @@ use Shimomo\Laravel\Ping;
 class PingTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * @var Shimomo\Laravel\Ping
+     * @var Ping
      */
     protected $ping;
 
