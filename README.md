@@ -8,7 +8,7 @@
 
 This is a package for using Ping in Laravel.
 
-## Install
+## Installation
 Install via Composer.
 ```
 $ composer require shimomo/laravel-ping
@@ -43,7 +43,6 @@ return [
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Ping;
 
 /**
  * @author shimomo
@@ -55,7 +54,7 @@ class PingController extends Controller
      */
     public function execute()
     {
-        if ($latency = Ping::execute('example.com')) {
+        if ($latency = \Ping::execute('example.com')) {
             return $latency . 'ms';
         }
 
