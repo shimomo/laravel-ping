@@ -2,12 +2,13 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+use PHPUnit\Framework\TestCase;
 use Shimomo\Laravel\Ping;
 
 /**
  * @author shimomo
  */
-class PingTest extends PHPUnit_Framework_TestCase
+class PingTest extends TestCase
 {
     /**
      * @var Ping
