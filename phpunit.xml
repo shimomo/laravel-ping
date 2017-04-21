@@ -17,7 +17,8 @@
         <whitelist>
             <directory>./src</directory>
             <exclude>
-                <file>./src/Ping.php</file>
+                <file>./src/PingFacade.php</file>
+                <file>./src/PingServiceProvider.php</file>
             </exclude>
         </whitelist>
     </filter>
