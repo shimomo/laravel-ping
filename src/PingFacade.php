@@ -2,12 +2,10 @@
 
 namespace Shimomo\Laravel;
 
-use Illuminate\Support\Facades\Facade;
-
 /**
  * @author shimomo
  */
-class PingFacade extends Facade
+class PingFacade extends \Illuminate\Support\Facades\Facade
 {
     /**
      * @return string

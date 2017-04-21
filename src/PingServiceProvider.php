@@ -2,12 +2,10 @@
 
 namespace Shimomo\Laravel;
 
-use Illuminate\Support\ServiceProvider;
-
 /**
  * @author shimomo
  */
-class PingServiceProvider extends ServiceProvider
+class PingServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     /**
      * @var bool

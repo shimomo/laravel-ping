@@ -2,8 +2,6 @@
 
 namespace Shimomo\Laravel;
 
-use JJG\Ping as GeerlingguyPing;
-
 /**
  * @author shimomo
  */
@@ -19,7 +17,7 @@ class Ping
      */
     public function __construct()
     {
-        $this->geerlingguyPing = new GeerlingguyPing('example.com');
+        $this->geerlingguyPing = new \JJG\Ping('example.com');
     }
 
     /**
@@ -32,11 +30,11 @@ class Ping
     {
         $this->geerlingguyPing->setHost($host);
 
-        if (!is_null($ttl)) {
+        if (! is_null($ttl)) {
             $this->geerlingguyPing->setTtl($ttl);
         }
 
-        if (!is_null($timeout)) {
+        if (! is_null($timeout)) {
             $this->geerlingguyPing->setTimeout($timeout);
         }
 
