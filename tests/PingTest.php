@@ -28,7 +28,7 @@ class PingTest extends TestCase
      */
     public function testSuccess()
     {
-        $this->assertInternalType('double', $this->ping->execute('example.com'));
+        $this->assertInternalType('double', $this->ping->execute('example.com', 128, 5));
     }
 
     /**
