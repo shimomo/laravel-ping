@@ -53,14 +53,14 @@ class PingController extends Controller
      */
     public function execute()
     {
-        if ($latency = \Ping::execute('example.com')) {
+        if ($latency = \Ping::execute('https://example.com/')) {
             return $latency . 'ms';
         }
 
-        return 'error';
+        return 'Not exist.';
     }
 }
 ```
 
 ## License
-laravel-ping is open-sourced software licensed under the [MIT license](LICENSE).
+Laravel Ping is open-sourced software licensed under the [MIT license](LICENSE).
