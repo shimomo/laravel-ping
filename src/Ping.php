@@ -21,14 +21,14 @@ class Ping
     }
 
     /**
-     * @param  string   $host
+     * @param  string   $url
      * @param  int|null $ttl
      * @param  int|null $timeout
      * @return double|bool
      */
-    public function execute(string $host, int $ttl = null, int $timeout = null)
+    public function execute(string $url, int $ttl = null, int $timeout = null)
     {
-        $this->geerlingguyPing->setHost($host);
+        $this->geerlingguyPing->setHost(parse_url($url, PHP_URL_HOST));
 
         if (! is_null($ttl)) {
             $this->geerlingguyPing->setTtl($ttl);

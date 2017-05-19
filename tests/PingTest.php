@@ -25,7 +25,7 @@ class PingTest extends \PHPUnit\Framework\TestCase
      */
     public function testSuccess()
     {
-        $this->assertInternalType('double', $this->ping->execute('example.com', 128, 5));
+        $this->assertInternalType('double', $this->ping->execute('https://example.com/', 128, 5));
     }
 
     /**
@@ -33,6 +33,6 @@ class PingTest extends \PHPUnit\Framework\TestCase
      */
     public function testFailure()
     {
-        $this->assertFalse($this->ping->execute('shimomo.example.com'));
+        $this->assertFalse($this->ping->execute('https://shimomo.example.com/'));
     }
 }
